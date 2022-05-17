@@ -24,7 +24,7 @@ echo $car1->getCarColor();
   <li>__LINE__<span> — получить номер строки, использующей константу</span></li>
   <li>__FILE__<span> — получить полный путь или имя файла, использующего константу</span></li>
   <li class="mb-05">__METHOD__<span> — получить имя метода, использующего константу</span></li>
-  <li><a href="">Полный перечень </a><span> магических констант и их описание</span></li>
+  <li><a href="https://www.php.net/manual/ru/language.constants.magic.php">Полный перечень </a><span> магических констант и их описание</span></li>
 </ul>
 
 <?php 
