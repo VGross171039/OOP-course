@@ -2,7 +2,6 @@
 class Car {
   public $tank;
 
-
   public function fill($float)
   {
     $this->tank += $float;
@@ -17,10 +16,6 @@ class Car {
     return $this;
   }
 
-
-
 }
-
-
 
 ?>
