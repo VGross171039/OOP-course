@@ -1,30 +1,42 @@
 <?php 
 
-class Car {
+class Car{
+  private $name;
+  private $color = 'green';
 
-  public $name;
-  public $color;
+  private $all = [];
 
-  // ===================== Добавление методов в класс ======================
+  // ==============================================================
 
-  function set_name($name) {   // Устанавливает значение свойства
+  public function set_all($all){
+    $this->all = $all;
+  }
+  public function get_all(){
+    return $this->all;
+  }
+
+  // ==============================================================
+
+  public function set_name($name){  // set - устанавливает свойство
     $this->name = $name;
   }
-  function get_name() {   // Получает значение свойства
+  public function get_name(){  // get - получает чвойство
     return $this->name;
   }
 
-  function set_color($color) {
+  // ==============================================================
+
+  public function set_color($color){  // set - устанавливает свойство
     $this->color = $color;
   }
-  function get_color() {
+  public function get_color(){  // get - получает чвойство
     return $this->color;
   }
 
+  // ==============================================================
 
-  public function hello() 
-  {
-    return 'beep' . '<br>';
+  public function hello(){
+    return 'beep';
   }
 
 }

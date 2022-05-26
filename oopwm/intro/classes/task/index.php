@@ -14,33 +14,6 @@
 
 <hr>
 
-<?php 
-class User {
-  public $name;
-  public $lastName;
-
-  public function hello()
-  {
-    return 'Hello';
-  }
-}
-
-?>
-
-<?php 
-$user1 = new User();
-$user2 = new User();
-
-$user1->name = 'Vladlen';
-$user1->lastName = 'Schetinin';
-$user2->name = 'Anton';
-$user2->lastName = 'Maximov';
-
-echo $user1->name . ' ' . $user1->lastName . '<br>';
-echo $user1->hello() . ', ' . $user1->name . ' ' . $user1->lastName . '<br>';
-echo $user2->hello() . ', ' . $user2->name . ' ' . $user2->lastName . '<br>';
-
-?>
 
 
 

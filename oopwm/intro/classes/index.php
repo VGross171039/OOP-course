@@ -6,38 +6,27 @@
 
 <?php 
 $bmw = new Car();
-$mersedes = new Car();
+$mercedes = new Car();
 
-$bmw->name = 'BMW';
-$bmw->color = 'green';
-echo $bmw->name . ': ';
-echo $bmw->color . '<hr>';
+$bmw->set_name('BMW');
+$bmw->set_color('red');
+echo 'Mark: ' . $bmw->get_name() . '<br>';
+echo 'Color: ' . $bmw->get_color() . '<br>';
 
-$mersedes->name = 'Mercedes Benz';
-$mersedes->color = 'red';
-echo $mersedes->name . ': ';
-echo $mersedes->color . '<hr>';
+$mercedes->set_name('Mersedes Bens');
+$mercedes->set_color('gray');
+echo 'Mark: ' . $mercedes->get_name() . '<br>';
+echo 'Color: ' . $mercedes->get_color() . '<br>';
 
-$bmw->set_name('BMW');  // Устанавливает значение свойства
-$mersedes->set_name('Mercedes Benz');
-echo $bmw->get_name() . '<br>';  // Получает значение свойства
-echo $mersedes->get_name() . '<hr>';
+// $bmw = $bmw->get_name() . '<br>';
+// echo $bmw;
+// $mercedes = $mercedes->get_name() . '<br>';
+// echo $mercedes;
 
-$bmw->set_color('brown');
-$mersedes->set_color('green');
+print_arr($bmw);
+print_arr($mercedes);
 
-echo 'Название: ' . $bmw->get_name() . '<br>';
-echo 'Цвет: ' . $bmw->get_color() . '<hr>';
-echo 'Название: ' . $mersedes->get_name() . '<br>';
-echo 'Цвет: ' . $mersedes->get_color() . '<hr>';
 
-?>
-
-<h3>Является ли объект экземпляром класса<span>Оператор instanceof используется для определения того, является ли текущий объект экземпляром указанного класса</span>
-<span>Возвращает TRUE / FALSE</span></h3>
-
-<?php 
-damp_arr($bmw instanceof Car);
 
 ?>
 
