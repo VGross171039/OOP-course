@@ -2,33 +2,61 @@
 <?php require_once $root . '/template/header.php';?>
 <?php require_once 'classes/Car.php';?>
 
-<h3>Работа с обьектами</h3>
+<h3>Классы и объекты в PHP</h3>
 
 <?php 
-$bmw = new Car();
-$mercedes = new Car();
+$sample = new Car;
+print_arr($sample);
 
+// Создаем экземпляры класса (объекты)
+$bmw = new Car;
+$mersedes = new Car;
+
+// Пример вывода значения свойств
+echo $bmw->color . '<br>';
+echo $mersedes->color . '<br>';
+
+// Установка значений color напрямую
+// $bmw->color = 'red';
+// $mersedes->color = 'yellow';
+// ====================================
+// Установка значений name напрямую
+// $bmw->name = 'BMW';
+// $mersedes->name = 'Mercedes Benz';
+
+// Установка значения name через setter
 $bmw->set_name('BMW');
+$mersedes->set_name('Mersedes-Benz');
+// Установка значения color через setter
 $bmw->set_color('red');
-echo 'Mark: ' . $bmw->get_name() . '<br>';
-echo 'Color: ' . $bmw->get_color() . '<br>';
+$mersedes->set_color('yellow');
 
-$mercedes->set_name('Mersedes Bens');
-$mercedes->set_color('gray');
-echo 'Mark: ' . $mercedes->get_name() . '<br>';
-echo 'Color: ' . $mercedes->get_color() . '<br>';
+// вывод значения name через getter
+echo $bmw->get_name() . '<br>';
+echo $mersedes->get_name() . '<br>';
+// вывод значения color через getter
+echo $bmw->get_color() . '<br>';
+echo $mersedes->get_color() . '<br>';
 
-// $bmw = $bmw->get_name() . '<br>';
-// echo $bmw;
-// $mercedes = $mercedes->get_name() . '<br>';
-// echo $mercedes;
 
 print_arr($bmw);
-print_arr($mercedes);
+print_arr($mersedes);
 
-
+// Используем метод hello()
+echo $bmw->hello() . '<br>';
+echo $mersedes->hello() . '<br>'
 
 ?>
+
+<h3>Является ли объект экземпляром класса? <span>Оператор instanceof используется для определения того, является ли
+    текущий объект экземпляром указанного класса</span></h3>
+
+<?php 
+var_dump($bmw instanceof Car);
+
+?>
+
+<p>Да, обьект $bmw является экземпляром класса Car</p>
 
 
 <?php require_once $root . '/template/footer.php';?>

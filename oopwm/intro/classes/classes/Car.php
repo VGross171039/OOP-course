@@ -1,44 +1,31 @@
 <?php 
+class Car {
+  public $name;
+  public $color = 'green';
 
-class Car{
-  private $name;
-  private $color = 'green';
-
-  private $all = [];
-
-  // ==============================================================
-
-  public function set_all($all){
-    $this->all = $all;
-  }
-  public function get_all(){
-    return $this->all;
-  }
-
-  // ==============================================================
-
-  public function set_name($name){  // set - устанавливает свойство
+  // Setter. Установка значения (опускаем ключевое слово)
+  function set_name($name){
     $this->name = $name;
   }
-  public function get_name(){  // get - получает чвойство
-    return $this->name;
-  }
-
-  // ==============================================================
-
-  public function set_color($color){  // set - устанавливает свойство
+  function set_color($color){
     $this->color = $color;
   }
-  public function get_color(){  // get - получает чвойство
+
+  // Getter. Вывод значения (опускаем ключевое слово)
+  function get_name(){
+    return $this->name;
+  }
+  function get_color(){
     return $this->color;
   }
 
-  // ==============================================================
-
-  public function hello(){
+  // Создание произвольного метода (указываем ключевое слово)
+  public function hello()
+  {
     return 'beep';
   }
 
 }
+
 
 ?>
