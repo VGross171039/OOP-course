@@ -9,10 +9,13 @@
 <hr>
 
 <?php 
-$myCar = new Car('Mersedes', 'Red');
+$mycar = new Car();
 
-echo $myCar->getCarModel() . '<br>';
-echo $myCar->getCarColor() . '<br>';
+$mycar->setCarModel('Mersedes');
+$mycar->setCarColor('red');
+
+echo $mycar->getCarModel() . '<br>';
+echo $mycar->getCarColor() . '<br>';
 
 ?>
 

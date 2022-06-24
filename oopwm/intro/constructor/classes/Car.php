@@ -1,4 +1,5 @@
 <?php 
+
 class Car{
   private $model = '';
   private $color = '';
@@ -13,15 +14,26 @@ class Car{
     }
   }
 
-  public function getCarModel()
+  public function setCarModel($model)
   {
-    return 'Class Name: ' . __CLASS__ . '<br>' . 'Car Mark: ' . $this->model;
+    $this->model = $model;
   }
 
-  function getCarColor() 
+  public function setCarColor($color)
   {
-    return 'Class Name: ' . __CLASS__ . '<br>' . 'Car Color: ' . $this->color;
+    $this->color = $color;
   }
+  
+  public function getCarModel()
+  {
+    return 'Car Model: ' . $this->model;
+  }
+
+  public function getCarColor()
+  {
+    return 'Car Color: ' . $this->color;
+  }
+
 
 }
 
