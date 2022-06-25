@@ -34,6 +34,11 @@ class Car{
     return 'Car Color: ' . $this->color;
   }
 
+  public function getCarClassModel()
+  {
+    return " Имя класса: " . __CLASS__ . " модель: " . $this -> model;
+  }
+
 
 }
 
