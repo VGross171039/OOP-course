@@ -1,6 +1,38 @@
+<?php
+
+use Car as GlobalCar;
+
+class CarExemple{
+  private $model;
+
+  public function setModel($model)
+  {
+    $this->model = $model;
+  }
+
+  public function hello()
+  {
+    return 'Бип! Я ' . $this->model . '<br>';
+  }
+
+}
+
+class MyCarExemple extends CarExemple{
+
+}
+?>
+
 <?php 
 class Car{
+  //Приватное свойство или метод может использовать только родитель
+  // Публичные методы и свойства могут использоваться как родительским, так и дочерним классами
   private $model;
+  protected $name;
+
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
 
   public function setModel($model)
   {
@@ -12,61 +44,49 @@ class Car{
     return $this->model;
   }
 
-  public function hello()
-  {
-    return 'Бип! Я ' . $this->model . '<br>';
-  }
-
 }
 
-class SportsCar extends Car{
+// Дочерний класс может использовать код, унаследованный от родительского класса, 
+// а также может иметь собственный код
+class SportCar extends Car{
+  private $style = 'быстрый и надёжный'; 
+  public function driveStyle()
+  {
+    return 'Автомобиль ' . $this->getModel() . ' - ' . $this->style . '!';
+  }
   
 }
 
-class AdvancedCar extends Car{
-  private $style = '- быстрый и надежный!';
-
-  public function driveStyle()
+class ProtectedModelCar extends Car{
+  public function hello()
   {
-    return 'Автомобиль ' . $this->getModel() . ' ' . $this->style . '<br>';
+    return 'Бип! Я ' . $this->name; // NOT ERROR
   }
-
 }
 
-class ProtectedCar{
-  protected $model;
-  protected $color;
-
-  public function setModel($model)
+class MethodsCar{
+  public $name;
+  public $color;
+  public function __construct($name, $color)
   {
-    $this->model = $model;
-  }
-
-  public function setColor($color)
-  {
+    $this->name = $name;
     $this->color = $color;
   }
 
   protected function intro()
   {
-    echo "Автомобиль {$this->model} имеет цвет: {$this->color}" . '<br>';
+    echo "Автомобиль {$this->name} имеет цвет: {$this->color}.";
   }
-
-
 }
 
-class ChildrenProtectedCar extends ProtectedCar{
-
-  public function hello()
+class MySportCar extends MethodsCar{
+  public function message()
   {
-    return 'Бип! Я ' . $this->model . '<br>';
-  }
-
-  public function message() {
     echo "Какой цвет у автомобиля? " . "<br>";
+    // доступ к защищенному методу, принадлежащему родителю
     $this -> intro();
   }
-
 }
+
 
 ?>

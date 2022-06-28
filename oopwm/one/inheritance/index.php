@@ -2,44 +2,53 @@
 <?php require_once $root . '/template/header.php';?>
 <?php require_once 'classes/Car.php';?>
 
-<h3>Введение в тему</h3>
+<h3>Наследование. Общие принципы</h3>
 
-<hr>
+<div class="code-exsemple">
+  <p>Синтаксис</p>
+  <pre>
+    <code>
+      class ParentClass {
+
+      }
+      class ChildClass extends ParentClass {
+        
+      }
+    </code>
+  </pre>
+</div>
+
+<p class="py-05">Пример 1</p>
 
 <?php 
-$myCar = new SportsCar();
+$myCar = new MyCarExemple();
 $myCar->setModel('Mersedes-Benz');
 echo $myCar->hello();
 ?>
 
-<hr>
-
-<?php
-$myNewCar = new AdvancedCar();
-$myNewCar->setModel('Ferrary');
-echo $myNewCar->driveStyle();
-?>
-
-<hr>
-
-<h3>Модификатор защищенного доступа (protected)</h3>
-
-<hr>
+<h3>Собственные методы и свойства дочернего класса</h3>
 
 <?php 
-$protectedCar = new ChildrenProtectedCar();
-$protectedCar->setModel('Mazeratty');
-$protectedCar->setColor('red');
-
-echo $protectedCar->hello();
-$protectedCar->message();
-
+$myCar = new SportCar();
+$myCar->setModel('Ferrary');
+echo $myCar->driveStyle();
 ?>
 
-<hr>
+<h3>Наследование и модификатор защищенного доступа</h3>
+
+<?php 
+$myCar = new ProtectedModelCar();
+$myCar->setName('VAZ');
+echo $myCar->hello();
+?>
+
+<p class="py-05">Пример с методами</p>
+
+<?php 
+$myCar = new MySportCar('Mercedes Benz', 'Красный');
+$myCar->message();
+?>
 
 <h3>Переопределение родительских свойств и методов</h3>
-
-<hr>
 
 <?php require_once $root . '/template/footer.php';?>
