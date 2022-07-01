@@ -1,31 +1,35 @@
 <?php 
-class GreatPublic{
-  const LEAV_MESS = "Welcome to wm-school.ru"; 
-}
+class Greet{
 
-class GreatIntro{
-  const LEAV_MESS = "Welcome to wm-school.ru"; 
-  public function greeting() {
-    return self::LEAV_MESS;
+  public const PUBLIC_MESS = "Welcome to wm-school.ru"; 
+  private const PRIVATE_MESS = 'Hello! I am private const';
+
+  public function getConst()
+  {
+    return self::PRIVATE_MESS . '<br>';
   }
+
 }
 
-class GreatPrivate{
-  private const LEAV_MESS = "Welcome to wm-school.ru"; 
-  public function greetingPrivate() {
-    return self::LEAV_MESS;
+class Circle{
+  const PI = 3.14;
+  private $radius;
+
+  public function __construct($radius)
+  {
+    $this->radius = $radius;
   }
-}
 
-const X = 22;
-const Y=7;
-class Square {
-   const PI=X/Y;
-   var $side=5;
-   function area(){
-      $area=$this->side**2*self::PI;
-      return $area;
-   }
+  public function getSquare()
+  {
+    return 'Площадь круга с заданным радиусом: ' . self::PI * ($this->radius ** 2);
+  }
+
+  public function getCircuit()
+  {
+    return 'Длина окружности с заданым радиусом: ' . self::PI * 2 * $this->radius;
+  }
+
 }
 
 

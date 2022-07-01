@@ -2,9 +2,11 @@
 <?php require_once $root . '/template/header.php';?>
 <?php require_once 'classes/Const.php';?>
 
-<h3>Константа класса PHP<span>Константы класса PHP могут быть объявлены в пределах одного класса. При объявлении или при
-    обращении к константам, в отличие от переменных, к ним не используется символ $. Область видимости констант по
-    умолчанию public, хотя в определении могут использоваться другие модификаторы</span></h3>
+<h3>Константа класса PHP
+  <span>Объявляются в пределах одного класса. При объявлении не используется символ $</span>
+  <span> Область видимости по умолчанию public, при определении могут использоваться другие
+    модификаторы</span>
+</h3>
 
 <div class="code-exsemple">
   <p>Синтаксис</p>
@@ -20,34 +22,21 @@
 
 <h3>Доступ к константе класса</h3>
 
-<p>Извне класса</p>
 <?php 
-echo GreatPublic::LEAV_MESS; 
-?>
+echo Greet::PUBLIC_MESS . '<br>';
 
-<p>Изнутри класса</p>
-<?php 
-$testIntro = new GreatIntro();
-echo $testIntro->greeting();
+$const = new Greet();
+echo $const->getConst();
 
 ?>
 
-<p>Модификаторы</p>
-<?php 
-$testPrivate = new GreatPrivate();
-echo $testPrivate->greetingPrivate();
-
-?>
-
-<h3>Константа класса как выражение</h3>
+<h3>Применение</h3>
 
 <?php 
-$s1=new Square();
-echo "PI=". Square::PI . "<br>";
-echo "area=" . $s1->area();
+$value = new Circle(12);
+echo $value->getSquare() . '<br>';
+echo $value->getCircuit() . '<br>';
+
 ?>
-
-
-
 
 <?php require_once $root . '/template/footer.php';?>

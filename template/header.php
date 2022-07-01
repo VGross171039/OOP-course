@@ -20,7 +20,7 @@
       <div class="container">
         <div class="col-50">
           <h1><a href="/">OOP </a>
-            <?php if (preg_match("/blockleft/i", $_SERVER['REQUEST_URI'])):?>
+            <?php if (preg_match("/blockright/i", $_SERVER['REQUEST_URI'])):?>
             <span class="px-05">|</span> This Course
             <?php elseif (preg_match("/oopwm/i", $_SERVER['REQUEST_URI'])):?>
             <span class="px-05">|</span> WM School
