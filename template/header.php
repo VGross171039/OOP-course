@@ -20,8 +20,8 @@
       <div class="container">
         <div class="col-50">
           <h1><a href="/">OOP </a>
-            <?php if (preg_match("/blockright/i", $_SERVER['REQUEST_URI'])):?>
-            <span class="px-05">|</span> This Course
+            <?php if (preg_match("/oopdel/i", $_SERVER['REQUEST_URI'])):?>
+            <span class="px-05">|</span> Course DEl
             <?php elseif (preg_match("/oopwm/i", $_SERVER['REQUEST_URI'])):?>
             <span class="px-05">|</span> WM School
             <?php endif;?>
