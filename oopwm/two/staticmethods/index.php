@@ -22,22 +22,5 @@
 
 <hr>
 
-<?php 
-
-echo Car::getColor() . '<br>';
-
-$someotherclass = new SomeOther();
-$someotherclass->message();
-
-echo '<br>';
-
-new MyClass();
-
-echo '<br>';
-
-$familyItem = new FamilyItem();
-echo $familyItem->daughterName;
-
-?>
 
 <?php require_once $root . '/template/footer.php';?>
