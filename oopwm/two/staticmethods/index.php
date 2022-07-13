@@ -22,5 +22,17 @@
 
 <hr>
 
+<?php 
+echo MyStaticClass::publicStaticMethod() . '<br>';
+// echo MyStaticClass::privateStaticMethod() . '<br>';
+//echo MyStaticClass::protectedStaticMethod() . '<br>';
+?>
+
+<?php 
+$someotherclass = new SomeOtherClass();
+$someotherclass->message();
+
+?>
+
 
 <?php require_once $root . '/template/footer.php';?>
