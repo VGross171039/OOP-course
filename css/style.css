@@ -167,6 +167,10 @@ h3 span {
   min-height: 100px;
 }
 
+.code-exsemple p{
+  margin-bottom: 0.5rem;
+}
+
 pre {
   width: 100%;
   padding: 0;
