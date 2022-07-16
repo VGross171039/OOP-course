@@ -9,8 +9,8 @@
     <hr>
     <p class="separator">Теория и синтаксис. Как пишутся классы</p>
   </li>
-  <li><a href="/oopdel/syntax/1/">1</a></li>
-  <li><a href="/oopdel/syntax/2/">2</a></li>
+  <li><a href="/oopdel/syntax/introduction/">Введение</a></li>
+  <li><a href="/oopdel/syntax/classesLesson/">Классы</a></li>
   <li><a href="/oopdel/syntax/3/">3</a></li>
   <li><a href="/oopdel/syntax/4/">4</a></li>
   <li class="pb-05"><a href="/oopdel/syntax/5/">5</a></li>
