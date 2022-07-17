@@ -29,6 +29,5 @@ echo $student->getFullName() . PHP_EOL;
 
 ?>
 
-<p>Время - 1.04</p>
 
 <?php require_once $root . '/template/footer.php'; ?>

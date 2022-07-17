@@ -11,8 +11,8 @@
   </li>
   <li><a href="/oopdel/syntax/introduction/">Введение</a></li>
   <li><a href="/oopdel/syntax/classesLesson/">Классы</a></li>
-  <li><a href="/oopdel/syntax/3/">3</a></li>
-  <li><a href="/oopdel/syntax/4/">4</a></li>
+  <li><a href="/oopdel/syntax/constructLesson/">Использование конструктора</a></li>
+  <li><a href="/oopdel/syntax/getsettersLesson/">Геттеры и сеттеры</a></li>
   <li class="pb-05"><a href="/oopdel/syntax/5/">5</a></li>
   <li>
     <hr>
