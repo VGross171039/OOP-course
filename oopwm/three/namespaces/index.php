@@ -1,6 +1,6 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];?>
 <?php require_once $root . '/template/header.php';?>
-<?php require_once 'classes/usage.php';?>
+<?php require_once 'classes/Student.php';?>
 
 <h3>Пространства имен <span>Пространство имён задается с помощью ключевого слова namespace, за которым следует имя
     пространства имён</span>
@@ -15,12 +15,10 @@
   </pre>
 </div>
 
+<hr>
+
 <?php 
-echo Math\add(4,7); // 11
-echo "<br>";
-echo Math\PI; // 3.14
-echo "<br>";
-echo Math\Geometry::getCircleArea(5); // 78.5
+$student = new classes\Student\Student('Vladlen', 'Schetinin');
 
 ?>
 
