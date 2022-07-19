@@ -15,29 +15,29 @@
 
 <?php 
 $student = new Student('Sydorov', 'Petya');
+echo $student->getFullName() . '<br>';
+?>
 
+<hr>
+
+<?php 
 $student->status = 10;
-echo $student->status . PHP_EOL;
-echo '<br>';
-echo $student->getFullName();
-echo '<br>';
-$student->htr = 12345;
-echo $student->htr;
-echo '<br>';
-unset($student->htr);
-echo 'Result after unset: ' . $student->htr;
-echo '<br>';
+echo $student->status . '<br>';
+
+$student->asdf = 'ASDF';
+echo $student->asdf . '<br>';
+
+unset($student->asdf);
+damp_arr($student->asdf);
 
 $student(23);
-
-echo '<br>';
 
 echo $student;
 
 ?>
 
-<hr>
+<p>1:31:27</p>
 
-<p>Время - 1:32</p>
+
 
 <?php require_once $root . '/template/footer.php'; ?>
