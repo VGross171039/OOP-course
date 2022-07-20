@@ -34,6 +34,8 @@ $student(23);
 
 echo $student;
 
+echo $student->getAddress('123', 15);
+
 ?>
 
 <p>1:31:27</p>

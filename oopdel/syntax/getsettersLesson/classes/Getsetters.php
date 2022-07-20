@@ -52,6 +52,14 @@ class Student
     return $this->getFullName() . '<br>';
   }
 
+// ====================== Осуществляет выборку ===========================
+
+  public function __call($name, $args)
+  {
+    return 'Call ' . $name . PHP_EOL;
+    print_r($args);
+  }
+
 // =================================================
 
   public function getFullName()

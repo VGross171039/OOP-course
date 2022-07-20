@@ -8,6 +8,10 @@
   $title = 'Теория и синтаксис. Конструктор';
 } elseif ($url == '/oopdel/syntax/getsettersLesson/') {
   $title = 'Теория и синтаксис. Геттеры и сеттеры';
+} elseif ($url == '/oopdel/syntax/constantsLesson/') {
+  $title = 'Теория и синтаксис. Константы и статика';
+} elseif ($url == '/oopdel/syntax/questionsLesson/') {
+  $title = 'Теория и синтаксис. Вопросы по разделу';
 }
 
 ?>
